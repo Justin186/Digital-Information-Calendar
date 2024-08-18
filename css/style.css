@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'digital-7 mono';
-    src: url('../fonts/digital-7-momo.ttf');
+    src: url('https://justin186.github.io/Digital-Information-Calendar/fonts/digital-7-momo.ttf');
 }
 body {
     background-color: white;
