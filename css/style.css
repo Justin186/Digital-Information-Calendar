@@ -1,6 +1,22 @@
 @font-face {
-    font-family: 'digital-7 mono';
-    src: url('https://raw.githubusercontent.com/Justin186/Digital-Information-Calendar/main/fonts/digital-7-mono.ttf') format('truetype');
+    font-family: 'digital';
+    src: url('../fonts/digital-7-mono-italic.ttf');
+}
+@font-face {
+    font-family: 'Simsun';
+    src: url('../fonts/simsun.ttc');
+}
+@font-face {
+    font-family: '华文行楷';
+    src: url('../fonts/hwxk.ttf');
+}
+@font-face {
+    font-family: 'Microsoft YaHei';
+    src: url('../fonts/msyh.ttf');
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/seguisb.ttf');
 }
 body {
     background-color: white;
@@ -35,8 +51,7 @@ body {
 .clock-display {
     position: absolute;
     color: #F9F6DE;
-    font-family: 'digital-7 mono';
-    font-style: italic;
+    font-family: 'digital';
     font-size: 45px;
     letter-spacing: 6px;
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #DF3A46;
@@ -46,8 +61,7 @@ body {
 .clock-display-beneath {
     position: absolute;
     color: #7D505D;
-    font-family: 'digital-7 mono';
-    font-style: italic;
+    font-family: 'digital';
     font-size: 45px;
     letter-spacing: 6px;
     white-space: pre;
@@ -57,11 +71,12 @@ body {
 .clock-text {
     position: absolute;
     color: #BCBAB6;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
     font-size: 30px;
     white-space: pre;    
 }
 #logo {
-    font-family: 华文行楷;
+    font-family: '华文行楷';
     top: 50px;
     left: 102px;
     height: 100px;            
@@ -144,7 +159,7 @@ body {
     left: 515px;
 }
 #colon {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 75px;
     font-style: normal;
     font-weight: 500;
@@ -153,7 +168,7 @@ body {
     white-space: pre;
 }
 #mist {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 75px;
     font-style: normal;
     font-weight: 500;
@@ -206,7 +221,7 @@ body {
     box-shadow: 0 0 0 3px #BCBAB6;
 }
 #id {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-weight: 500;
     font-size: 15px;
     transform: scaleX(0.9);
