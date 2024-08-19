@@ -38,8 +38,8 @@ body {
     width: 756px;
     background-color: #4a4a4d;
     position: absolute;
-    top: 22;
-    left: 22;
+    top: 22px;
+    left: 22px;
     border:22px inset #35363856;
 }
 .clock-surface {
@@ -69,7 +69,7 @@ body {
     z-index: 0;
     background-color: #38383b;
     text-indent: 6px;
-    min-height: max-content;
+    height: 45px;
 }
 .clock-text {
     position: absolute;
@@ -100,41 +100,33 @@ body {
     top: 70px;
     left: 180px;
 }
-#calendar {
+#calendar, #year, #month, #day, #week, #weekd, #temp, #tempd {
     top: 118px;
     left: 75px;
 }
 #year {
-    top: 118px;
     left: 145px;
 }
 #month {
     text-align: left;
-    top: 118px;
     left: 305px;
 }
 #day {            
-    top: 118px;
     left: 400px;
 }
-#week {
+#week, #temp {
     writing-mode: vertical-lr;
     font-size: 20px;
     top: 120px;
     left: 505px;
 }
-#weekd {
-    top: 118px;
+#weekd, #tempd {
     left: 536px;
 }
 #temp {
-    writing-mode: vertical-lr;
-    font-size: 20px;
-    top: 120px;
     left: 585px;
 }
 #tempd {
-    top: 118px;
     left: 614px;
 }
 #time {
@@ -143,25 +135,24 @@ body {
     top: 218px;
     left: 52px;
 }
-#hour {
+#hour, #minute, #second {
     font-size: 75px;
     letter-spacing: 15px;
+    height: 75px;
+}
+#hour {
     top: 220px;
     left: 190px;
 }
 #minute {
-    font-size: 75px;
-    letter-spacing: 15px;
     top: 220px;
     left: 350px;
 }
 #second {
-    font-size: 75px;
-    letter-spacing: 15px;
     top: 220px;
     left: 510px;
 }
-#colon {
+#colon, #mist {
     font-family: 'Segoe UI', sans-serif;
     font-size: 75px;
     font-style: normal;
@@ -171,24 +162,18 @@ body {
     white-space: pre;
 }
 #mist {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 75px;
-    font-style: normal;
-    font-weight: 500;
     top: 194px;
     left: 635px;
     text-shadow: none;
     color: #3D242A;
 }
-#alarm {
+#alarm, #topclock {
     font-size: 17px;
     top: 228px;
-    left: 658px;
+    left: 662px;
 }
 #topclock {
-    font-size: 17px;
     top: 258px;
-    left: 658px;
 }
 #countdown {
     font-size: 55px;
