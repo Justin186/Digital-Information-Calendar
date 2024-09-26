@@ -32,12 +32,14 @@ function formatToFourChars(str) {
 function updateClock() {
     const status = document.getElementById('status').checked;
     const rateValue = document.getElementById('rate').value;
+    const absRateValue = Math.abs(rateValue);
+    const flag = Math.sign(rateValue);
     if (status === false) {
         now = new Date();
     }
     else {
-        if (rateValue <= 100) {
-            now = new Date(now.getTime() + 1000);
+        if (absRateValue <= 100) {
+            now = new Date(now.getTime() + 1000 * flag);
         } else {
             now = new Date(now.getTime() + parseInt(rateValue) * 10);
         }
@@ -228,7 +230,7 @@ function updateTempDisplay() {
     }
 }
 function updateRate() {
-    const rateValue = document.getElementById('rate').value;
+    const rateValue = Math.abs(document.getElementById('rate').value);
     localStorage.setItem('rateValue', rateValue); // 保存到 localStorage
     const status = document.getElementById('status').checked;
     if (intervalClock) {
@@ -312,7 +314,7 @@ function ImportConfig() {
         document.getElementById('date-select').value = dateValue; // 日期选择框
     }
     else {
-        document.getElementById('date-select').value = '2024-01-01'; // 默认日期
+        document.getElementById('date-select').value = '2025-06-07'; // 默认日期
     }
     if (rateValue) {
         document.getElementById('rate').value = rateValue;
