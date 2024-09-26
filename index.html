@@ -23,7 +23,7 @@
                 <div class="clock-text" id="topclock">整点</div>
                 <div class="clock-text" id="countdown">距            仅剩               天</div>
                 <div class="clock-text" id="id">MR 3040D</div>
-                <div class="nameplate">高考</div>
+                <div id="nameplate">高考</div>
                 <div class="clock-display" id="year"></div>
                 <div class="clock-display" id="month"></div>
                 <div class="clock-display" id="day"></div>
@@ -34,7 +34,7 @@
                 <div class="clock-display" id="second"></div>
                 <div class="clock-display" id="colon">:     :</div>
                 <div class="clock-display" id="mist">:</div>
-                <div class="clock-display" id="cdt">   0</div>
+                <div class="clock-display" id="ctd"></div>
                 <div class="clock-display-beneath" id="year">8888</div>
                 <div class="clock-display-beneath" id="month">88</div>
                 <div class="clock-display-beneath" id="day">88</div>
@@ -43,9 +43,69 @@
                 <div class="clock-display-beneath" id="hour">88</div>
                 <div class="clock-display-beneath" id="minute">88</div>
                 <div class="clock-display-beneath" id="second">88</div>
-                <div class="clock-display-beneath" id="cdt">8888</div>
+                <div class="clock-display-beneath" id="ctd">8888</div>
             </div>
         </div>
+    </div>
+    <div class="panel-container">
+        <div class="panel-text" style="text-align: center;">设置面板</div>
+        <div class="separator-horizontal"></div>
+        <div class="panel-text">样式</div>
+        <div class="separator-horizontal"></div>
+        <div class="clock-display" id="exp1"></div>
+        <div class="clock-display-beneath" id="exp1">8888</div>
+        <div class="clock-display-two" id="exp2"></div>
+        <div class="clock-display-beneath-two" id="exp2">8888</div>
+        <form class="panel-text" style="text-align:center;">
+            <div style="height: 50px;"></div>
+            <input type="radio" id="cs1" name="clock-style" checked>
+            <span>样式一</span>
+            <span style="margin: 0 20px;">&nbsp;</span>
+            <input type="radio" id="cs2" name="clock-style">
+            <span>样式二</span>
+        </form>
+        <div class="separator-horizontal"></div>
+        <div class="panel-text">倒计时</div>
+        <div class="separator-horizontal"></div>
+        <form class="panel-text" style="text-align:center;">
+            倒数日名称：<input id="ctdname" type="text">
+            <input id="date-select" type="date">
+        </form>
+        <div class="separator-horizontal"></div>
+        <div class="panel-text">温度</div>
+        <div class="separator-horizontal"></div>
+        <form class="panel-text">
+            <input type="radio" id="jit" name="tpmd" checked>
+            <span>实时获取</span> 
+            <span style="white-space: pre;">       </span>
+            <span id="apiw">Key :</span>
+            <input id="api" type="text">
+            <img src="img/warning.svg" alt="Invalid API Key!" id="warn" title="无效API Key或1分钟内访问次数过多">
+            <div style="height: 10px;"></div>
+            <input type="radio" id="fix" name="tpmd">
+            <span>设为定值</span>
+            <span style="white-space: pre;">                   </span>
+            <span id="tmpw">Tmp(℃) :</span>
+            <input id="tmp" type="number" value="26" min="-99" max="99" step="1">
+            <div style="height: 10px;"></div>
+            <input type="radio" id="sim" name="tpmd">
+            <span>程序模拟</span>
+            <span style="white-space: pre;">                      </span>
+            <span id="selw">地区 :</span>
+            <select style="font-size: 20px;">
+                <option value="nn">南宁</option>
+                <option value="dl">大连</option>
+            </select>
+        </form>
+        <div class="separator-horizontal"></div>
+        <div class="panel-text">时间修改</div>
+        <div class="separator-horizontal"></div>
+        <form class="panel-text">
+            <input type="checkbox" id="status">
+            <span style="white-space: pre;">开启时间修改         Rate :</span>
+            <input id="rate" type="number" value="1.0" min="-100000.0" max="100000.0" step="0.1">
+        </form>
+        <button type="button" id="reset">清空本地数据</button>
     </div>
 </div>
 </body>
